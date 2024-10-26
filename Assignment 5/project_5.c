@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 
 int main (void) {
 	
@@ -8,16 +8,17 @@ int main (void) {
 	float totalPoints;
 	float testPoints[CURR_ASSIGNMENT];
 	
-	printf("\nPlease enter points possible per assignment: ")
-		scanf("%d", maxGrade);
+	printf("\nPlease enter points possible per assignment: ");
+	
+	scanf("%d", &maxPoints);
 	
 	totalPoints = 0;
 	CURR_ASSIGNMENT = 1;
 	
-	while (scanf("%lf", testPoints[CURR_ASSIGNMENT])) {
-		printf("\nPlease enter assignment %d grade [q to quit]: ", CURR_ASSIGNMENT);
+	while (scanf("\n%lf", &testPoints[CURR_ASSIGNMENT])) {
+		printf("Please enter assignment %d grade [q to quit]: ", CURR_ASSIGNMENT);
 		
-		totalPoints += testPoints[CURR_ASSUGNMENTS];
+		totalPoints += testPoints[CURR_ASSIGNMENT];
 		++CURR_ASSIGNMENT;		
 	}
 	
