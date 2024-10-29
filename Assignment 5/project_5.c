@@ -1,14 +1,19 @@
+/*
+Christian Vazquez Garcia
+T20271522
+C Language
+*/
 #include <stdio.h>
 
 int main (void) {
 	
 	int pointsPossible;
 	int totalPointsPossible;
-	int CURR_ASSIGNMENT = 50;
+	int CURR_ASSIGNMENT;
 
 	char percent = '%';
 	
-	float testPoints[CURR_ASSIGNMENT];
+	float testPoints[50];
 	float totalPoints = 0;
 	float pointPercentage;
 	
@@ -47,7 +52,7 @@ int main (void) {
 			printf("\nAssignment %d grade was %1.f points out of %d : %1.f%c - ", CURR_COUNT + 1, testPoints[CURR_COUNT], pointsPossible, pointPercentage, percent);
 
 			if (pointPercentage > 89) {
-			printf("A");
+				printf("A");
 			}
 			else if (pointPercentage > 79) {
 				printf("B");
