@@ -16,6 +16,8 @@ int main (void) {
 	float testPoints[50];
 	float totalPoints = 0;
 	float pointPercentage;
+
+	printf("\n	---Assignment Grader Tool---\n");
 	
 	printf("\nPlease enter the points possible per assignment: ");
 
@@ -25,25 +27,25 @@ int main (void) {
 
 		totalPointsPossible = pointsPossible;
 	
-	printf("Please enter assignment %d grade [q to quit]: ", CURR_ASSIGNMENT + 1);
+	printf("\nPlease enter assignment %d grade [q to quit]: ", CURR_ASSIGNMENT + 1);
 
 
 		while (scanf("%f", &testPoints[CURR_ASSIGNMENT])) {
 			if (testPoints[CURR_ASSIGNMENT] > pointsPossible){
-				printf("Error: Grade higher than possible grade for the assignment.");
+				printf("\nError: Grade higher than possible grade for the assignment.");
 			}
 			else {
 				totalPoints = totalPoints + testPoints[CURR_ASSIGNMENT];
 				CURR_ASSIGNMENT++;		
 			}
 
-			printf("Please enter assignment %d grade [q to quit]: ", CURR_ASSIGNMENT + 1);
+			printf("\nPlease enter assignment %d grade [q to quit]: ", CURR_ASSIGNMENT + 1);
 
 		}
 
 		int CURR_COUNT;
 
-		printf("You entered %d assignment grades as follows:", CURR_ASSIGNMENT);
+		printf("\nYou entered %d assignment grades as follows:\n", CURR_ASSIGNMENT);
 
 		for (CURR_COUNT = CURR_ASSIGNMENT - 1; CURR_COUNT >= 0; --CURR_COUNT){
 
@@ -52,19 +54,19 @@ int main (void) {
 			printf("\nAssignment %d grade was %1.f points out of %d : %1.f%c - ", CURR_COUNT + 1, testPoints[CURR_COUNT], pointsPossible, pointPercentage, percent);
 
 			if (pointPercentage > 89) {
-				printf("A");
+				printf("A\n");
 			}
 			else if (pointPercentage > 79) {
-				printf("B");
+				printf("B\n");
 			}
 			else if (pointPercentage > 69) {
-				printf("C");
+				printf("C\n");
 			}
 			else if (pointPercentage > 59){
-				printf("F");
+				printf("F\n");
 			}
 			else {
-				printf("D");
+				printf("D\n");
 			}
 		}
 
@@ -75,19 +77,19 @@ int main (void) {
 
 		printf("\n%1.f points out of %d possible for an overall grade of %1.f%c - ", totalPoints, totalPointsPossible, pointPercentage, percent);
 		if (pointPercentage > 89) {
-			printf("A");
+			printf("A\n");
 		}
 		else if (pointPercentage > 79) {
-			printf("B");
+			printf("B\n");
 		}
 		else if (pointPercentage > 69) {
-			printf("C");
+			printf("C\n");
 		}
 		else if (pointPercentage > 59){
-			printf("F");
+			printf("F\n");
 		}
 		else {
-			printf("D");
+			printf("D\n");
 		}
 	
 	}
